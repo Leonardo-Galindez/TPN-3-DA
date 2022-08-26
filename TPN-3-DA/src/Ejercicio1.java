@@ -3,8 +3,8 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         //n cantidad de oraciones y m cantidad de palabras
         int posFila,posColum;
-        posFila=CantPosFila();
-        posColum=CantPosColum();
+        posFila=Modulos.CantPosFila();
+        posColum=Modulos.CantPosColum();
         int [][]Matriz=new int [posFila][posColum];
         CargarMatriz(Matriz, posColum, posFila);
         MostrarMatriz(Matriz,posColum,posFila);
@@ -33,20 +33,5 @@ public class Ejercicio1 {
         }
     }
 
-    public static int CantPosColum(){
-        Scanner sc= new Scanner(System.in);
-        int PosColum;
-        System.out.println("Ingrese cantidad columnas");
-        PosColum=sc.nextInt();
-        return PosColum;
-    }
-
-    public static int CantPosFila(){
-        Scanner sc= new Scanner(System.in);
-        int PosFila;
-        System.out.println("Ingrese cantidad filas");
-        PosFila=sc.nextInt();
-        return PosFila;
     
-    }
 }
