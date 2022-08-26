@@ -9,7 +9,6 @@ public class Ejercicio2 {
         CargarMatriz(MatrizCarac, cantFilas, cantColum);
         MostrarMatriz(MatrizCarac, cantFilas, cantColum);
     }
-
     public static void CargarMatriz(char Matriz[][],int cantFilas,int cantColum){
         Scanner sc=new Scanner(System.in);
         char carac;
@@ -21,7 +20,6 @@ public class Ejercicio2 {
             }
         }
     }
-
     public static void MostrarMatriz(char Matriz[][],int cantFilas,int cantColum){
         for(int i=0;i<cantFilas;i++){
             for(int j=0;j<cantColum;j++){
