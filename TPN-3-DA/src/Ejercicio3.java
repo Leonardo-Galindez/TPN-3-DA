@@ -7,34 +7,31 @@ public class Ejercicio3 {
         cantFilas=Modulos.CantPosFila();
         cantColum=Modulos.CantPosColum();
         String[][] MatrizString=new String[cantFilas][cantColum];
-        System.out.println("Ingrese frase");
-        frase=sc.nextLine();
-        CargaMatriz(frase, MatrizString, cantColum, cantFilas);
+        CargaMatriz(MatrizString, cantColum, cantFilas);
         for(int i=0;i<cantFilas;i++){
             for(int j=0;j<cantColum;j++){
                 System.out.println(MatrizString[i][j]+"--");
             }   
         }
     }
-    public static void CargaMatriz(String cadena,String[][] MatrizString,int cantColum,int cantFilas){
-        int lon,a;
-        String palabra,frase;
-        palabra="";
-        frase="";
-        a=0;
-        lon=cadena.length();
+    public static void CargaMatriz(String[][] MatrizString,int cantColum,int cantFilas){
+        String cadena,valor;
+        valor="";
         for(int i=0;i<cantFilas;i++){
             for(int j=0;j<cantColum;j++){
-                while(a<lon){
-                    if(cadena.charAt(i)!=' '){
-                        frase=frase+cadena.charAt(a);
-                    }else{
-                        frase="";
-                    }  
-                    MatrizString[i][j]=palabra;
-                    a++;
-                }
+                do {
+                    cadena=IngresoFrase();
+                }while(valor!="0");
+                MatrizString[i][j]=cadena;
             }
         }
     }    
+    public static String IngresoFrase(){
+        Scanner sc= new Scanner(System.in);
+        String frase;
+        System.out.println("Ingrese frase");
+        frase=sc.nextLine();
+        return frase;
+    }
+
 }
