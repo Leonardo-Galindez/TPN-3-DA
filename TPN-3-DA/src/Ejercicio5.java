@@ -12,9 +12,11 @@ public class Ejercicio5 {
         orden=sc.nextInt();
         int [][] CuadroMagico = new int [orden][orden];
         CargarMatriz(CuadroMagico, orden);
+        
         MostrarMatriz(CuadroMagico, orden);
+      
         numBase=NumeroBase(CuadroMagico, orden);
-        sc.nextLine();
+    
         System.out.println(numBase);
         valorDiagonal=VerificarDiagonal(CuadroMagico, orden);
         while(valorFila && i<orden){
@@ -101,7 +103,8 @@ public class Ejercicio5 {
     public static void MostrarMatriz(int [][] CuadroMagico,int orden){
         for(int i=0;i<orden;i++){
             for(int j=0;j<orden;j++){
-                System.out.print(CuadroMagico[i][j]+" "); 
+                System.out.print(CuadroMagico[i][j]+"");
+                 
             }
             System.out.println();
         }

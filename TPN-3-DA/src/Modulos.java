@@ -3,7 +3,7 @@ public class Modulos {
     public static int CantPosColum(){
         Scanner sc= new Scanner(System.in);
         int PosColum;
-        System.out.println("Ingrese cantidad columnas");
+        System.out.println("Ingrese cantidad columnas de la Matriz");
         PosColum=sc.nextInt();
         return PosColum;
     }
@@ -11,7 +11,7 @@ public class Modulos {
     public static int CantPosFila(){
         Scanner sc= new Scanner(System.in);
         int PosFila;
-        System.out.println("Ingrese cantidad filas");
+        System.out.println("Ingrese cantidad filas de la Matriz");
         PosFila=sc.nextInt();
         return PosFila;
     
