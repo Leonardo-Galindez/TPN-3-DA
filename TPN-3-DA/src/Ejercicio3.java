@@ -11,6 +11,7 @@ public class Ejercicio3 {
         InicializarMatriz(MatrizString, cantFilas, cantColum);
         IngresoCadena(MatrizString, cantFilas, cantColum);
         MostrarMatriz(MatrizString, cantFilas, cantColum);
+        sc.nextInt();
         do{
             System.out.println("Ingrese posicion de la palabra ");
             System.out.println("Ingrese Fila");
@@ -42,10 +43,8 @@ public class Ejercicio3 {
                 j++;
             }
             j++;
-            
         }
     }
-    
     public static void InicializarMatriz(String[][] MatrizString,int cantFilas,int cantColum){
         for(int i=0;i<cantFilas;i++){
             for(int j=0;j<cantColum;j++){
@@ -53,7 +52,6 @@ public class Ejercicio3 {
             }
         }
     }
-
     public static void MostrarMatriz(String[][] MatrizString,int cantFilas,int cantColum){
         for(int i=0;i<cantFilas;i++){
             for(int j=0;j<cantColum;j++){
