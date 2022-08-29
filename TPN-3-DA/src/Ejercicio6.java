@@ -66,10 +66,9 @@ public class Ejercicio6 {
         return deuda;
     }
     public static boolean ListaSocioNoDeuda(float [][] Socios,int fila,int lonFila,int lonColum){
-        int Nodeuda,i;
+        int i;
         boolean valorDeuda;
         valorDeuda=true;
-        Nodeuda=0;
         i=0;
         
         while(valorDeuda && i<lonColum){
