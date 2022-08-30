@@ -38,6 +38,9 @@ public class Ejercicio7 {
             break;
         }
     }
+    public static void MostrarEspiral(int [][] Matriz,int lonFila,int lonColum){
+        
+    }   
 
     public static void MostrarZigZag(int [][] Matriz,int lonFila,int lonColum){
         for(int i=0;i<lonFila;i++){
