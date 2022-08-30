@@ -31,7 +31,8 @@ public class Ejercicio7 {
                 ColumArribaAbajo(Matriz, lonFila, lonColum);
             break;
             case 3:
-
+                System.out.println();
+                MostrarEspiral(Matriz, lonFila, lonColum);
             break;
             case 4:
                 MostrarZigZag(Matriz, lonFila, lonColum);
@@ -39,8 +40,23 @@ public class Ejercicio7 {
         }
     }
     public static void MostrarEspiral(int [][] Matriz,int lonFila,int lonColum){
-        
-    }   
+    } 
+   
+    public static void DerechaIzquierda(int [][] Matriz,int lonFila,int lonColum,int posFila,int posColum){
+        for(int k=lonColum-2;k>=0;k--){
+            System.out.print(Matriz[lonFila-1][k]);
+        }
+    }
+    public static void AbajoArriba(int [][] Matriz,int lonFila,int lonColum,int posFila,int posColum){
+        for(int h=lonFila-2;h>0;h--){
+            System.out.print(Matriz[h][posColum]);
+        }
+    }
+    public static void derecha(int [][] Matriz,int lonFila,int lonColum,int pointIncial,int pointFinal){
+        for(int i=pointIncial;i<pointFinal;i++){
+            System.out.println("");
+        }
+    }
 
     public static void MostrarZigZag(int [][] Matriz,int lonFila,int lonColum){
         for(int i=0;i<lonFila;i++){
@@ -58,6 +74,7 @@ public class Ejercicio7 {
         }
     }
 
+   
     public static void ColumArribaAbajo(int [][] Matriz,int lonFila,int lonColum){
         for(int i=lonFila-1;i>=0;i--){
             for(int j=0;j<lonColum;j++){

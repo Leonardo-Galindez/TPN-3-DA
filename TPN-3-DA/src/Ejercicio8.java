@@ -21,6 +21,7 @@ public class Ejercicio8 {
         }
 
     }
+    
     public static boolean VerificarMatriz(int [][] Matriz,int orden,int i){
         boolean valorMatriz;
         valorMatriz=false;
@@ -35,6 +36,7 @@ public class Ejercicio8 {
         return valorMatriz;
 
     }
+
     public static void CargarMatriz(int [][] Matriz,int orden){
         Scanner sc=new Scanner(System.in);
         int num;

@@ -11,6 +11,7 @@ public class Ejercicio6 {
         lonFila=Socios.length;
         lonColum=Socios[0].length;
         CargarMatriz(Socios);
+        //cambiar menu por switch
         do{
             System.out.println();
             System.out.println("Socios que deben 3 o mas cuotas------------------------------1");

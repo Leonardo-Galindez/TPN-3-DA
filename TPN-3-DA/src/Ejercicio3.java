@@ -10,8 +10,9 @@ public class Ejercicio3 {
         String[][] MatrizString=new String[cantFilas][cantColum];
         InicializarMatriz(MatrizString, cantFilas, cantColum);
         IngresoCadena(MatrizString, cantFilas, cantColum);
+        System.out.println();
         MostrarMatriz(MatrizString, cantFilas, cantColum);
-        sc.nextInt();
+        System.out.println();
         do{
             System.out.println("Ingrese posicion de la palabra ");
             System.out.println("Ingrese Fila");
