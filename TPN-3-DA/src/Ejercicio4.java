@@ -12,11 +12,7 @@ public class Ejercicio4 {
         CargarMatriz(NotasAlumnos);
         //menu
         do{
-            System.out.println();
-            System.out.println("Promedio de todos sus alumnos------------1");
-            System.out.println("Mostrar notas y promedio de un alumno----2");
-            System.out.println("Mostrar la mayor nota del utimo examen---3");
-            System.out.println("Finalizar--------------------------------0");
+            Texto();
             rta=sc.nextInt();
             switch(rta){
             case 1:
@@ -43,6 +39,15 @@ public class Ejercicio4 {
         }while(!valorMenu);
         
     }
+
+    public static void Texto(){
+        System.out.println();
+        System.out.println("Promedio de todos sus alumnos------------1");
+        System.out.println("Mostrar notas y promedio de un alumno----2");
+        System.out.println("Mostrar la mayor nota del utimo examen---3");
+        System.out.println("Finalizar--------------------------------0");
+    }
+
     public static int MayorNota(int [][] NotasAlumnos,int cantFilas,int cantColum){
         int mayor,posMayor;
         mayor=0;

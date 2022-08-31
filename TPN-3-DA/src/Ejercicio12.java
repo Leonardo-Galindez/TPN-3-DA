@@ -6,32 +6,32 @@ public class Ejercicio12{
         System.out.println("Ingrese orden de la matriz");
         orden=sc.nextInt();
         int [][] Matriz= new int[orden][orden];
-        int [] ArregloAux = new int[orden];
+        int [] ArrayAux = new int[orden];
         CargarMatriz(Matriz,orden);
         MostrarMatriz(Matriz, orden);
         for(int j=0;j<orden;j++){
-            posMayor=MayorNumero(Matriz, orden,j);
-            ArregloAux(Matriz,ArregloAux,orden,posMayor,j);
-            IntercambioFilas(Matriz, ArregloAux, orden, posMayor, j);
-            
+            posMayor=MayorNumero(Matriz, orden, j);
+            ArrayAux(ArrayAux, Matriz, orden, posMayor);
+            IntercambioFilas(ArrayAux, Matriz, orden, posMayor, j);
+            MostrarMatriz(Matriz, orden);
         }
-        MostrarMatriz(Matriz, orden);
-        
-
     } 
-    public static void IntercambioFilas(int [][] Matriz,int ArregloAux[],int orden,int posMayor,int j){
+    public static void IntercambioFilas(int [] ArrayAux,int [][] Matriz,int orden,int posMayor,int j){
         for(int i=0;i<orden;i++){
-            Matriz[posMayor][i]=ArregloAux[i];
+            Matriz[posMayor][i]=Matriz[j][i];
+        }
+    }
+
+    public  static void ArrayAux(int [] ArrayAux,int [][] Matriz,int orden,int posMayor){
+        for(int i=0;i<orden;i++){
+            if(i>0){
+                ArrayAux[i]=0;
+            }else{
+                ArrayAux[i]=Matriz[posMayor][i];
+            }
         }
     }
     
-    public static int[] ArregloAux(int [][] Matriz,int ArregloAux[],int orden,int posMayor,int j){
-        for(int i=0;i<orden;i++){
-            ArregloAux[i]=Matriz[j][i];
-        }
-        return ArregloAux;
-    }
-
     public static int MayorNumero(int [][] Matriz,int orden,int j){
         int mayor,posMayor;
         posMayor=0;
@@ -43,7 +43,7 @@ public class Ejercicio12{
             }
         }
         return posMayor;
-    }
+    } 
 
     public static void MostrarMatriz(int [][] Matriz,int orden){
         for(int i=0;i<orden;i++){
