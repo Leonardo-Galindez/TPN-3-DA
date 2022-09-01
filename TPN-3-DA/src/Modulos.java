@@ -16,17 +16,4 @@ public class Modulos {
         return PosFila;
     
     }
-
-    public static int MayorNumero(int [][] Matriz,int orden,int j){
-        int mayor,posMayor;
-        posMayor=0;
-        mayor=0;
-        for(int i=0;i<orden;i++){
-            if(mayor<Matriz[i][j]){
-                mayor=Matriz[i][j];
-                posMayor=i;
-            }
-        }
-        return posMayor;
-    }
 }

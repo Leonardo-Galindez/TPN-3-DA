@@ -13,12 +13,9 @@ public class Ejercicio12{
             posMayor=MayorNumero(Matriz, orden, j);
             Intercambiofilas(Matriz,ArrayAux,orden,j,posMayor);
             CompletarCero(Matriz, ArrayAux, orden, j, posMayor);
-            
         }
         System.out.println();
         MostrarMatriz(Matriz, orden);
-           
-        
     } 
 
     public static void Intercambiofilas(int [][] Matriz,int ArrayAux[],int orden,int j,int posMayor){
