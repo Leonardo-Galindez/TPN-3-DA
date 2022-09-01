@@ -1,32 +1,29 @@
 import java.util.Scanner;
-public class Ejercicio9 {
+public class Ejercicio10 {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        int lonFila,lonColum,posFila;
+        int lonFila,lonColum,posColum;
 
         lonFila=Modulos.CantPosFila();
         lonColum=Modulos.CantPosColum();
         int [][] Matriz=new int[lonFila][lonColum];
-        int [] Numeros= new int[lonFila];
+        int [] Numeros= new int[lonColum];
         CargarMatriz(Matriz, lonFila, lonColum);
-        CargarArreglo(Numeros, lonFila);
         MostrarMatriz(Matriz, lonFila, lonColum);
+        System.out.println();
+        System.out.println("Ingrese colum de la matriz para el arreglo");
+        posColum=sc.nextInt();
+        AsignarColum(Matriz, Numeros, lonFila, lonColum, posColum-1);
         System.out.println();
         MostrarArreglo(Numeros, lonFila, lonColum);
-        System.out.println();
-        System.out.println("Ingrese fila que desea reemplazar");
-        posFila=sc.nextInt();
-        ReemplazarFila(Matriz, Numeros, lonFila, lonColum, posFila-1);
-        System.out.println();
-        MostrarMatriz(Matriz, lonFila, lonColum);
 
     }
 
-    public static void ReemplazarFila(int [][] Matriz,int [] Numeros,int lonFila,int lonColum,int posFila){
+    public static void AsignarColum(int [][] Matriz,int [] Numeros,int lonFila,int lonColum,int posColum){
         for(int i=0;i<lonFila;i++){ 
             for(int j=0;j<lonColum;j++){
-                if(i==posFila){
-                    Matriz[i][j]=Numeros[i];
+                if(j==posColum){
+                    Numeros[i]=Matriz[i][posColum];
                 }
             }
         }
@@ -56,15 +53,6 @@ public class Ejercicio9 {
                 num=sc.nextInt();
                 Matriz[i][j]=num;
             }
-        }
-    }
-    public static void CargarArreglo(int [] Numeros,int lonFila){
-        Scanner sc= new Scanner(System.in);
-        int num;
-        for(int i=0;i<lonFila;i++){
-            System.out.println("Ingrese numero");
-            num=sc.nextInt();
-            Numeros[i]=num;
         }
     }
 }

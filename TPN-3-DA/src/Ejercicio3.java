@@ -35,14 +35,20 @@ public class Ejercicio3 {
     }
     public static void CargarMatriz( String[][] MatrizString,String frase,int cantColum,int cantfilas){
         int lon,j;
+        boolean valorFrase;
+        valorFrase=false;
         j=0;
         frase=frase+' ';
         lon=frase.length();
         for(int i=0;i<cantColum;i++){
-            while(frase.charAt(j)!=' ' && j<lon){
+            while(frase.charAt(j)!=' ' && j<lon && !valorFrase){
                 MatrizString[cantfilas][i]=MatrizString[cantfilas][i]+frase.charAt(j);
                 j++;
             }
+            if(j>lon){
+                valorFrase=true;
+            }
+            
             j++;
         }
     }

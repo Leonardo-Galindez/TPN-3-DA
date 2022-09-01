@@ -11,27 +11,32 @@ public class Ejercicio12{
         MostrarMatriz(Matriz, orden);
         for(int j=0;j<orden;j++){
             posMayor=MayorNumero(Matriz, orden, j);
-            ArrayAux(ArrayAux, Matriz, orden, posMayor);
-            IntercambioFilas(ArrayAux, Matriz, orden, posMayor, j);
-            MostrarMatriz(Matriz, orden);
+            Intercambiofilas(Matriz,ArrayAux,orden,j,posMayor);
+            CompletarCero(Matriz, ArrayAux, orden, j, posMayor);
+            
         }
+        System.out.println();
+        MostrarMatriz(Matriz, orden);
+           
+        
     } 
-    public static void IntercambioFilas(int [] ArrayAux,int [][] Matriz,int orden,int posMayor,int j){
-        for(int i=0;i<orden;i++){
-            Matriz[posMayor][i]=Matriz[j][i];
-        }
-    }
 
-    public  static void ArrayAux(int [] ArrayAux,int [][] Matriz,int orden,int posMayor){
+    public static void Intercambiofilas(int [][] Matriz,int ArrayAux[],int orden,int j,int posMayor){
         for(int i=0;i<orden;i++){
-            if(i>0){
-                ArrayAux[i]=0;
-            }else{
-                ArrayAux[i]=Matriz[posMayor][i];
-            }
+            ArrayAux[i]=Matriz[j][i];
+            Matriz[j][i]=Matriz[posMayor][i];
+            Matriz[posMayor][i]=ArrayAux[i];
         }
     }
     
+    public static void CompletarCero(int [][] Matriz,int ArrayAux[],int orden,int j,int posMayor){
+        for(int i=0;i<orden;i++){
+            if(i>j){
+                Matriz[j][i]=0;
+            }
+        }
+    }
+ 
     public static int MayorNumero(int [][] Matriz,int orden,int j){
         int mayor,posMayor;
         posMayor=0;
@@ -43,7 +48,7 @@ public class Ejercicio12{
             }
         }
         return posMayor;
-    } 
+    }
 
     public static void MostrarMatriz(int [][] Matriz,int orden){
         for(int i=0;i<orden;i++){
