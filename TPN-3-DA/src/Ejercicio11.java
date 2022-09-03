@@ -1,23 +1,29 @@
 import java.util.Scanner;
 public class Ejercicio11 {
     public static void main(String[] args) {
+        
         Scanner sc=new Scanner(System.in);
+
         int cantFila,cantColum;
+
         cantFila=Modulos.CantPosFila();
         cantColum=Modulos.CantPosColum();
+
         int [][] Matriz= new int[cantFila][cantColum];
         int [][] Traspuesta= new int  [cantColum][cantFila];
+
         CargaMatriz(Matriz, cantFila, cantColum);
+        System.out.println();
         MostrarMatriz(Matriz, cantFila, cantColum);
         MatrizTraspuesta(Matriz, Traspuesta, cantFila, cantColum);
         System.out.println();
-        MostrarMatriz(Traspuesta, cantFila, cantColum);
+        MostrarMatriz(Traspuesta, cantColum, cantFila);
       
     }
     public static void MatrizTraspuesta(int [][] Matriz,int[][] Traspuesta, int cantFila,int cantColum){
-        for(int i=0;i<cantColum;i++){
-            for(int j=0;j<cantFila;j++){
-                Traspuesta[i][j]=Matriz[j][i];
+        for(int i=0;i<cantFila;i++){
+            for(int j=0;j<cantColum;j++){
+                Traspuesta[j][i]=Matriz[i][j];
             }
         }
     }
