@@ -16,4 +16,12 @@ public class Modulos {
         return PosFila;
     
     }
+
+    public static int OrdenMatriz(){
+        Scanner sc= new Scanner(System.in);
+        int orden;
+        System.out.println("Ingrese orden de la matriz");
+        orden=sc.nextInt();
+        return orden;
+    }
 }
