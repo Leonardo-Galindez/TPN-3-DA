@@ -1,15 +1,19 @@
 import java.util.Scanner;
+
+import javax.swing.text.MaskFormatter;
 public class Ejercicio2 {
     public static void main(String[] args) {
        
         int cantFilas,cantColum;
         boolean valor;
-        cantFilas=Modulos.CantPosFila();
-        cantColum=Modulos.CantPosColum();
-        char [][] MatrizCarac=new char[cantFilas][cantColum];
+        /*cantFilas=Modulos.CantPosFila();
+        cantColum=Modulos.CantPosColum();*/
         /*CargarMatriz(MatrizCarac, cantFilas, cantColum);
         MostrarMatriz(MatrizCarac, cantFilas, cantColum);*/
-        char [][] Matriz= {{'a','a','c'},{'a','c','a'},{'c','a','a'}};
+        char [][] Matriz=  {{'a','a','c','d'},
+                            {'a','c','d','c'},
+                            {'b','d','c','a'},
+                            {'f','c','a','d'}};
         valor= VerificarMatriz(Matriz);
         if(valor){
             System.out.println("diagonal 2da igual");
@@ -18,13 +22,26 @@ public class Ejercicio2 {
     public static boolean VerificarMatriz(char [][] Matriz){
 
         boolean valor;
+        char letra,l;
+        int lon;
+        letra=' ';
         valor=false;
-        for(int i=0;i<3;i++){
-            for(int j=2;j>=0;j--){
-                if(Matriz[i][j]=='c'){
-                    valor=true;
+        lon=Matriz.length-1;
+        letra=Matriz[0][Matriz.length-1];
+        for(int i=0;i<=lon;i++){
+            for(int j=0;j<=lon;j++){
+                if(i+j == lon){
+                    if(letra==Matriz[i][j]){
+                        valor=true;
+                    }else{
+                        valor=false;
+                    }
+             
                 }
             }
+            
+            
+            
         }
         return valor;
 
